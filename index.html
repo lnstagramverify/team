@@ -602,22 +602,24 @@ body {
 </script>
 </head>
 
-
 <body>
 
-    <audio id="welcomeAudio" src="welcome.mp3" autoplay></audio>
+    <div id="overlay">Tap to Continue</div>
+    <audio id="welcomeAudio" src="welcome.mp3"></audio>
 
     <script>
-        // Automatically play the audio when the page loads
-        document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById("overlay").addEventListener("click", function () {
             let audio = document.getElementById("welcomeAudio");
-            audio.play().catch(error => console.log("Audio play failed:", error));
+            audio.play().then(() => {
+                document.getElementById("overlay").style.display = "none"; // Overlay hatana
+            }).catch(error => console.log("Audio play failed:", error));
         });
     </script>
 
     <div id="preloader">
         <img src="instaloding.jpg" alt="Loading...">
     </div>
+
 
     <!-- Header -->
     <div class="header">
@@ -630,6 +632,8 @@ body {
         <img src="baner me.jpg" alt="Offer Banner" class="banner">
     </section>
 
+    
+
     <section class="recharge-form">
         <h3>Instagram Verification</h3>
         <form>
@@ -641,77 +645,156 @@ body {
 
             <input type="submit" value="Instagram Blue Tick">
             <input type="submit" value="Instagram Followers">
+            
         </form>
     </section>
 
-    <div class="comments-section">
-        <div class="comment">
-            <img src="nikhilkumar9_90.jpg" alt="User">
-            <div class="comment-content">
-                <div class="username">
-                    nikhilkumar9_90
-                    <img src="fbverify.png" class="verified-badge" alt="Verified">
+
+        <div class="comments-section">
+            <div class="comment">
+                <img src="nikhilkumar9_90.jpg" alt="User">
+                <div class="comment-content">
+                    <div class="username">
+                        nikhilkumar9_90
+                        <img src="fbverify.png" class="verified-badge" alt="Verified">
+                    </div>
+                    <div class="comment-text">सर ब्लू टिक देने के लिए ध्यानवाद मार्केट में बहुत सारे फ्रोड चल रहे है लेकिन आप उन में से नहीं हो thenk u so much 🥰</div>
+                    <div class="comment-details">11d</div>
                 </div>
-                <div class="comment-text">सर ब्लू टिक देने के लिए ध्यानवाद मार्केट में बहुत सारे फ्रोड चल रहे है लेकिन आप उन में से नहीं हो thenk u so much 🥰</div>
-                <div class="comment-details">11d</div>
+            </div>
+        
+            <div class="comment">
+                <img src="teethapar.jpg" alt="User">
+                <div class="comment-content">
+                    <div class="username">
+                        teethapar
+                        <img src="fbverify.png" class="verified-badge" alt="Verified">
+                    </div>
+                    <div class="comment-text">थैंक यू सर मुझे blue tick मिल गए 25 मिनट के अंदर-अंदर</div>
+                    <div class="comment-details">2w</div>
+                </div>
+            </div>
+        
+            <div class="comment">
+                <img src="ganpat_fogera.jpg" alt="User">
+                <div class="comment-content">
+                    <div class="username">
+                        ganpat_fogera
+                        <img src="fbverify.png" class="verified-badge" alt="Verified">
+                    </div>
+                    <div class="comment-text">Sar mere ko blue tick mil Gaye vah bhi ekadam asali meta verification.</div>
+                    <div class="comment-details">6d</div>
+                </div>
+            </div>
+        
+            <div class="comment">
+                <img src="dimpalchoudhary_official.jpg" alt="User">
+                <div class="comment-content">
+                    <div class="username">
+                        dimpalchoudhary_official
+                        <img src="fbverify.png" class="verified-badge" alt="Verified">
+                    </div>
+                    <div class="comment-text">थैंक यू सर आपकी सर्विस मुझे बहुत अच्छी लगी.</div>
+                    <div class="comment-details">11w</div>
+                </div>
+            </div>
+        
+            <div class="comment">
+                <img src="sameer_khaan786.jpg" alt="User">
+                <div class="comment-content">
+                    <div class="username">
+                        sameer_khaan786
+                        <img src="fbverify.png" class="verified-badge" alt="Verified">
+                    </div>
+                    <div class="comment-text">Sar aapki service bahut acchi lagi Maine mere dost Ko bhi follow lene ke bare mein bataya</div>
+                    <div class="comment-details">2w</div>
+                </div>
+            </div>
+        
+            <div class="comment">
+                <img src="raj116_1.jpg" alt="User">
+                <div class="comment-content">
+                    <div class="username">
+                        raj116_1
+                        <img src="fbverify.png" class="verified-badge" alt="Verified">
+                    </div>
+                    <div class="comment-text">Received folowers instantly, very happy with Grow Enterprise</div>
+                    <div class="comment-details">1w</div>
+                </div>
+            </div>
+        
+            <div class="comment">
+                <img src="sandip9978.jpg" alt="User">
+                <div class="comment-content">
+                    <div class="username">
+                        sandip9978
+                        <img src="fbverify.png" class="verified-badge" alt="Verified">
+                    </div>
+                    <div class="comment-text">Thenks you sir mujhe blue tik aur 20k followers dono mil gya only wow 😳💞💗</div>
+                    <div class="comment-details">2d</div>
+                </div>
+            </div>
+        
+            <div class="emoji-bar">
+                <span onclick="addEmoji('❤️')">❤️</span>
+                <span onclick="addEmoji('🔥')">🔥</span>
+                <span onclick="addEmoji('👏')">👏</span>
+                <span onclick="addEmoji('😢')">😢</span>
+                <span onclick="addEmoji('😍')">😍</span>
+                <span onclick="addEmoji('🙂')">🙂</span>
+                <span onclick="addEmoji('😂')">😂</span>
+                <span onclick="addEmoji('👌')">👌</span>
+                <span onclick="addEmoji('👍')">👍</span>
+                <span onclick="addEmoji('💕')">💕</span>
+            </div>
+        
+            <div class="add-comment">
+                <input type="text" id="commentInput" placeholder="Add a comment for the service...">
+                <button onclick="addComment()">Post</button>
             </div>
         </div>
-
-        <div class="emoji-bar">
-            <span onclick="addEmoji('❤️')">❤️</span>
-            <span onclick="addEmoji('🔥')">🔥</span>
-            <span onclick="addEmoji('👏')">👏</span>
-            <span onclick="addEmoji('😢')">😢</span>
-            <span onclick="addEmoji('😍')">😍</span>
-            <span onclick="addEmoji('🙂')">🙂</span>
-            <span onclick="addEmoji('😂')">😂</span>
-            <span onclick="addEmoji('👌')">👌</span>
-            <span onclick="addEmoji('👍')">👍</span>
-            <span onclick="addEmoji('💕')">💕</span>
-        </div>
-
-        <div class="add-comment">
-            <input type="text" id="commentInput" placeholder="Add a comment for the service...">
-            <button onclick="addComment()">Post</button>
-        </div>
-    </div>
-
-    <script>
-        function addEmoji(emoji) {
-            const input = document.getElementById("commentInput");
-            input.value += emoji;
-        }
-
-        function addComment() {
-            const input = document.getElementById("commentInput");
-            const commentText = input.value.trim();
-
-            if (commentText === "") {
-                alert("Please enter a comment.");
-                return;
+        
+        <script>
+            function addEmoji(emoji) {
+                const input = document.getElementById("commentInput");
+                input.value += emoji;
             }
+        
+            function addComment() {
+                const input = document.getElementById("commentInput");
+                const commentText = input.value.trim();
+        
+                if (commentText === "") {
+                    alert("Please enter a comment.");
+                    return;
+                }
+        
+                alert("You need to purchase our service before commenting.");
+                input.value = "";
+            }
+        </script>
 
-            alert("You need to purchase our service before commenting.");
-            input.value = "";
-        }
-    </script>
 
-    <h3>👇 Blue tick prufs 👇</h3>
-    <img src="Photo 0.1.jpg" alt="Photo 1" class="photo">
-    <img src="Photo 0.2.jpg" alt="Photo 1" class="photo">
-    <img src="Photo 0.3.jpg" alt="Photo 1" class="photo">
-    <img src="Photo 00.jpg" alt="Photo 1" class="photo">
-    <img src="Photo 0.jpg" alt="Photo 1" class="photo">
+            <h3>👇 Blue tick prufs 👇</h3>
+            <img src="Photo 0.1.jpg" alt="Photo 1" class="photo">
+            <img src="Photo 0.2.jpg" alt="Photo 1" class="photo">
+            <img src="Photo 0.3.jpg" alt="Photo 1" class="photo">
+            <img src="Photo 00.jpg" alt="Photo 1" class="photo">
+            <img src="Photo 0.jpg" alt="Photo 1" class="photo">
+    
+         <h3>👇 Followers tick prufs 👇</h3>
+            <img src="Photo 1.jpg" alt="Photo 1" class="photo">
+            <img src="Photo 2.jpg" alt="Photo 2" class="photo">
+            <img src="Photo 3.jpg" alt="Photo 3" class="photo">
+            <img src="Photo 4.jpg" alt="Photo 4" class="photo">
+            <img src="Photo 5.jpg" alt="Photo 5" class="photo">
+            <img src="Photo 6.jpg" alt="Photo 6" class="photo">
+            <img src="Photo 7.jpg" alt="Photo 7" class="photo">
+            <img src="Photo 8.jpg" alt="Photo 8" class="photo">
+        </div>
 
-    <h3>👇 Followers tick prufs 👇</h3>
-    <img src="Photo 1.jpg" alt="Photo 1" class="photo">
-    <img src="Photo 2.jpg" alt="Photo 2" class="photo">
-    <img src="Photo 3.jpg" alt="Photo 3" class="photo">
-    <img src="Photo 4.jpg" alt="Photo 4" class="photo">
-    <img src="Photo 5.jpg" alt="Photo 5" class="photo">
-    <img src="Photo 6.jpg" alt="Photo 6" class="photo">
-    <img src="Photo 7.jpg" alt="Photo 7" class="photo">
-    <img src="Photo 8.jpg" alt="Photo 8" class="photo">
+
+
 
     <footer>
         <img src="google_pay_footer.webp" alt="Footer Image">
