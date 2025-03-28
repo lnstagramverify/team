@@ -604,17 +604,17 @@ body {
 
 <body>
 
-    <div id="overlay">Tap to Continue</div>
     <audio id="welcomeAudio" src="welcome.mp3"></audio>
 
     <script>
-        document.getElementById("overlay").addEventListener("click", function () {
-            let audio = document.getElementById("welcomeAudio");
-            audio.play().then(() => {
-                document.getElementById("overlay").style.display = "none"; // Overlay hatana
-            }).catch(error => console.log("Audio play failed:", error));
-        });
+        window.onload = function () {
+            setTimeout(() => {
+                let audio = document.getElementById("welcomeAudio");
+                audio.play().catch(error => console.log("Audio play failed:", error));
+            }, 2000); // 2 सेकंड बाद ऑडियो ऑटो-प्ले होगा
+        };
     </script>
+
 
     <div id="preloader">
         <img src="instaloding.jpg" alt="Loading...">
